@@ -3,16 +3,18 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 export type MoodEntry = {
     mood: string;
     date: string;
+    reflection?: string;
 }
 
 const STORAGE_KEY = '@MoodJournal:entries';
 
-export const saveMoodEntry = async (mood: string): Promise<void> => {
+export const saveMoodEntry = async (mood: string, reflection?: string): Promise<void> => {
     try {
         const newEntry: MoodEntry = {
             mood,
             date: new Date().toDateString(),
-        }
+            reflection,
+        };
 
         const existingEntries = await getMoodEntries();
         const updateEntries = [...existingEntries, newEntry];

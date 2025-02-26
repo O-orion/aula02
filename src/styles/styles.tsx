@@ -5,17 +5,19 @@ export const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#f0f0f5',
-    },
-    title: {
-        color: '#333',
+      },
+      title: {
         fontSize: 28,
-        fontWeight: '700',
-        marginBottom: 20
-    },
-    button: {
+        marginBottom: 40,
+      },
+      button: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 15,
+        marginVertical: 10,
+      },
+      buttonText: {
         fontSize: 18,
-        color: '#007AFF',
-        padding: 10
-    }
+        marginLeft: 10,
+      },
 })
